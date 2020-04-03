@@ -1,6 +1,19 @@
-# vue-toggle-button
+# Vue Toggle Button
 
-## Project setup
+![Vue Toggle Button](./screenshot.png?raw=true "Vue Toggle Button")
+
+## Table of contents
+---
+- [Getting started](#getting-started)
+- [Usage](#usage)
+- [Options](#options)
+    - [Handle Event](#handle-event)
+    - [Custom Label](#custom-label)
+    - [Default State](#default-state)
+    - [Disable Button](#disable-button)
+
+## Getting started
+
 ```
 npm install
 ```
@@ -10,15 +23,76 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+## Usage
+```js
+<template>
+    <div>
+        <ToggleButton id="switch" />
+    </div>
+</template>
+
+<script>
+import ToggleButton from './components/ToggleButton.vue'
+
+export default {
+    components: {
+        ToggleButton
+    }
+}
+</script>
 ```
 
-### Lints and fixes files
-```
-npm run lint
+## Options
+
+### Handle Event
+```js
+<template>
+    <div>
+        <ToggleButton 
+            id="switch"
+            v-on:change="eventHandler"
+        />
+    </div>
+</template>
+
+<script>
+import ToggleButton from './components/ToggleButton.vue'
+
+export default {
+    components: {
+        ToggleButton
+    },
+
+    methods: {
+        eventHandler(value) {
+            console.log(value);
+        }
+    }
+}
+</script>
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Custom Label
+```html
+<ToggleButton 
+    id="switch"
+    labelEnableText="Live"
+    labelDisableText="Draft"
+/>
+```
+
+### Default State
+```html
+<ToggleButton 
+    id="switch"
+    :defaultState="true"
+/>
+```
+
+### Disable Button
+```html
+<ToggleButton 
+    id="switch"
+    :disabled="true"
+/>
+```
