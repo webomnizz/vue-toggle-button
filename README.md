@@ -3,7 +3,7 @@
 ![Vue Toggle Button](./screenshot.png?raw=true "Vue Toggle Button")
 
 ## Table of contents
----
+
 - [Getting started](#getting-started)
 - [Usage](#usage)
 - [Available Properties](#available-properties)
