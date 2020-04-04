@@ -6,11 +6,7 @@
 ---
 - [Getting started](#getting-started)
 - [Usage](#usage)
-- [Options](#options)
-    - [Handle Event](#handle-event)
-    - [Custom Label](#custom-label)
-    - [Default State](#default-state)
-    - [Disable Button](#disable-button)
+- [Available Properties](#available-properties)
 
 ## Getting started
 
@@ -42,9 +38,7 @@ export default {
 </script>
 ```
 
-## Options
-
-### Handle Event
+### Get Toggle State with Custom Event Handler
 ```js
 <template>
     <div>
@@ -72,27 +66,15 @@ export default {
 </script>
 ```
 
-### Custom Label
-```html
-<ToggleButton 
-    id="switch"
-    labelEnableText="Live"
-    labelDisableText="Draft"
-/>
-```
+### Available Properties
 
-### Default State
-```html
-<ToggleButton 
-    id="switch"
-    :defaultState="true"
-/>
-```
+List of available properties to use in this component:
 
-### Disable Button
-```html
-<ToggleButton 
-    id="switch"
-    :disabled="true"
-/>
-```
+Prop            | Data Type         | Default           | Description
+--------------- |------------------ |------------------ |--------------
+`id`            | `String`          | primary           | Element Id
+`default-state`  | `Boolean`         | `false`           | Toggle State (true | false)
+`disabled`      | `Boolean`         | `false`           | Disable the toggle button
+`label-enable-text`   | `String`          | On                | Active Label
+`label-disable-text`    | `String`          | Off               | In-Active Label
+
