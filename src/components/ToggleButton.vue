@@ -43,7 +43,17 @@ export default {
         }
     },
 
+    watch: {
+        defaultState: function defaultState() {
+            this.currentState = Boolean(this.defaultState)
+        }
+    },
+
     computed: {
+        // currentState() {
+        //     return this.defaultState;
+        // },
+
         isActive() {
             return this.currentState;
         },
@@ -58,7 +68,7 @@ export default {
 
         checkedValue: {
             get() {
-                return this.defaultState;
+                return this.currentState;
             },
 
             set(newValue) {
